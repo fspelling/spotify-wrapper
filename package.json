@@ -1,0 +1,65 @@
+{
+  "name": "js-tdd",
+  "version": "1.0.0",
+  "description": "Aplicação com boas praticas em java script seguindo o padrão de testes TDD",
+  "main": "src/index.js",
+  "scripts": {
+    "clear": "rimraf lib",
+    "build": "./node_modules/.bin/babel --out-dir lib src",
+    "build:clear": "npm run clear && ./node_modules/.bin/babel --out-dir lib src",
+    "build:watch": "npm run build -- --watch",
+    "build:umd": "./node_modules/.bin/webpack --output-filename spotify-warpper.umd.js",
+    "build:umd:min": "./node_modules/.bin/webpack --output-filename spotify-wrapper.umd.min.js -p",
+    "build:all": "npm run build && npm run build:umd && npm run build:umd:min",
+    "lint": "./node_modules/.bin/eslint src/*.js --fix",
+    "test": "./node_modules/.bin/mocha test/**/*.spec.js --require babel-register",
+    "test:tdd": "./node_modules/.bin/mocha test/**/*.spec.js --require babel-register --watch",
+    "test:coverage": "nyc npm test",
+    "prepush": "npm run lint && npm run test:coverage"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "functions": 80,
+    "lines": 80,
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "test/**"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fspelling/js-tdd.git"
+  },
+  "keywords": [
+    "js",
+    "tdd"
+  ],
+  "author": "Fernando Spelling",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fspelling/js-tdd/issues"
+  },
+  "homepage": "https://github.com/fspelling/js-tdd#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "husky": "^1.2.0",
+    "i": "^0.3.6",
+    "mocha": "^5.2.0",
+    "node-fetch": "^1.6.3",
+    "nyc": "^13.1.0",
+    "sinon": "^2.1.0",
+    "sinon-chai": "^2.9.0",
+    "sinon-stub-promise": "^4.0.0",
+    "webpack": "^2.4.1"
+  }
+}
