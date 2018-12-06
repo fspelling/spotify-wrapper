@@ -15,7 +15,7 @@
     "test": "./node_modules/.bin/mocha test/**/*.spec.js --require babel-register",
     "test:tdd": "./node_modules/.bin/mocha test/**/*.spec.js --require babel-register --watch",
     "test:coverage": "nyc npm test",
-    "prepush": "npm run lint && npm run test:coverage"
+    "prepush": "npm run test:coverage"
   },
   "nyc": {
     "check-coverage": true,
