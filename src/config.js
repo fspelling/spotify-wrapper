@@ -6,5 +6,4 @@ const HEADERS = {
     }
 };
 
-export default API_URL;
-export { HEADERS };
+export { API_URL, HEADERS };

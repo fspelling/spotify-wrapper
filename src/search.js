@@ -1,16 +1,12 @@
-import { HEADERS } from './config';
+function searcher(query, type) {
+  return this.request(`${this.apiURL}/search?q=${query}&type=${type}`);
+}
 
-const search = (query, type) => fetch(`https://api.spotify.com/v1/search?q=${query}&type=${type}`, HEADERS)
-  .then(data => data.json());
-
-const searchArtists = query => search(query, 'artist');
-
-const searchAlbums = query => search(query, 'album');
-
-const searchTracks = query => search(query, 'tracks');
-
-const searchPlayLists = query => search(query, 'playLists');
-
-export {
-  search, searchAlbums, searchArtists, searchTracks, searchPlayLists,
-};
+export default function search() {
+  return {
+    artists: searcher.bind(this, 'artist'),
+    albums: searcher.bind(this, 'album'),
+    tracks: searcher.bind(this, 'track'),
+    playlists: searcher.bind(this, 'playlist')
+  }
+}

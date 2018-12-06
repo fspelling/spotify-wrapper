@@ -2,7 +2,7 @@
   "name": "wrapper-spotify-newtest",
   "version": "1.0.9",
   "description": "Aplicação com boas praticas em java script seguindo o padrão de testes TDD",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "clear": "rimraf lib",
     "build": "./node_modules/.bin/babel --out-dir lib src",
