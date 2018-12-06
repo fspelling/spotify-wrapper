@@ -224,14 +224,6 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
-## Authors
-
-| ![Willian Justen](https://avatars2.githubusercontent.com/u/3991845?v=3&s=150)|
-|:---------------------:|
-|  [Willian Justen](https://github.com/willianjusten/)   |
-
-See also the list of [contributors](https://github.com/willianjusten/spotify-wrapper/contributors) who participated in this project.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
