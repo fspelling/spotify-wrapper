@@ -1,6 +1,6 @@
 {
-  "name": "wrapper-spotify",
-  "version": "1.0.4",
+  "name": "wrapper-spotify-test",
+  "version": "1.0.6",
   "description": "Aplicação com boas praticas em java script seguindo o padrão de testes TDD",
   "main": "lib/index.js",
   "scripts": {
