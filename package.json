@@ -2,7 +2,7 @@
   "name": "wrapper-spotify",
   "version": "1.0.4",
   "description": "Aplicação com boas praticas em java script seguindo o padrão de testes TDD",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "clear": "rimraf lib",
     "build": "./node_modules/.bin/babel --out-dir lib src",
@@ -18,6 +18,10 @@
     "prepush": "npm run test:coverage",
     "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls"
   },
+  "Files": [
+    "lib",
+    "dist"
+  ],
   "nyc": {
     "check-coverage": true,
     "functions": 80,

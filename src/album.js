@@ -1,8 +1,8 @@
 import toJSON from './util';
-import API_URL from './config';
+import API_URL, { HEADERS } from './config';
 
-const getAlbum = id => fetch(`${API_URL}/albums/${id}`).then(toJSON);
+const getAlbum = id => fetch(`${API_URL}/albums/${id}`, HEADERS).then(toJSON);
 
-const getAlbumTracks = id => fetch(`${API_URL}/albums/${id}/tracks`).then(toJSON);
+const getAlbumTracks = id => fetch(`${API_URL}/albums/${id}/tracks`, HEADERS).then(toJSON);
 
 export { getAlbum, getAlbumTracks };
