@@ -1,6 +1,6 @@
 {
   "name": "js-tdd",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Aplicação com boas praticas em java script seguindo o padrão de testes TDD",
   "main": "src/index.js",
   "scripts": {
